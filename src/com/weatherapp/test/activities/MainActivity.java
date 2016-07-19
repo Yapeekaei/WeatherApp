@@ -102,15 +102,15 @@ public class MainActivity extends AppCompatActivity implements RequestHandler, O
 						break;
 					}
 					AlertDialog.Builder builder = new AlertDialog.Builder(WeatherApp.getAppContext().getCurrentActivity());
-		        	builder.setView(R.layout.forecast);
-		        	builder.setCancelable(true);
-		        	forecastDialog = builder.create();
-		        	forecastDialog.show();
-		        	forecastDialog.getWindow().setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-		        	AppCompatTextView title = (AppCompatTextView)forecastDialog.findViewById(R.id.city_title);
-		        	title.setText(city.getCityName());
-		        	AppCompatButton sendBtn = (AppCompatButton)forecastDialog.findViewById(R.id.send_btn);
-		        	sendBtn.setOnClickListener(new OnClickListener() {
+			        	builder.setView(R.layout.forecast);
+			        	builder.setCancelable(true);
+			        	forecastDialog = builder.create();
+			        	forecastDialog.show();
+			        	forecastDialog.getWindow().setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+			        	AppCompatTextView title = (AppCompatTextView)forecastDialog.findViewById(R.id.city_title);
+			        	title.setText(city.getCityName());
+			        	AppCompatButton sendBtn = (AppCompatButton)forecastDialog.findViewById(R.id.send_btn);
+			        	sendBtn.setOnClickListener(new OnClickListener() {
 						@Override
 						public void onClick(View v) {
 							final Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
@@ -123,12 +123,14 @@ public class MainActivity extends AppCompatActivity implements RequestHandler, O
 							}
 						}
 					});
-		        	RecyclerView forecastView = (RecyclerView)forecastDialog.findViewById(R.id.forecast_list);
-		        	RecyclerView.LayoutManager lM = new LinearLayoutManager(this);
-		        	forecastView.setLayoutManager(lM);
-		        	ForecastRecyclerViewAdapter adapter = new ForecastRecyclerViewAdapter(city.getWeatherForecast());
-		        	forecastView.setAdapter(adapter);
-		        	forecastView.invalidate();
+			        	RecyclerView forecastView = (RecyclerView)forecastDialog.findViewById(R.id.forecast_list);
+			        	RecyclerView.LayoutManager lM = new LinearLayoutManager(this);
+			        	forecastView.setLayoutManager(lM);
+			        	ForecastRecyclerViewAdapter adapter = new ForecastRecyclerViewAdapter(city.getWeatherForecast());
+			        	forecastView.setAdapter(adapter);
+			        	forecastView.invalidate();
+				} else {
+					Toast.makeText(this, R.string.no_connection_toast, Toast.LENGTH_LONG).show();
 				}
 				break;
 			}
