@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeatherApp</string>
+    
+    <string name="add_city">Search city</string>
+    <string name="refresh">Refresh</string>
+    <string name="send_mail">Send via email</string>
+    <string name="search_city_placeholder">Enter city name</string>
+    
+    <string name="no_connection_message">Can\'t find your location. Please, check the Internet connection</string>
+    <string name="no_connection_toast">No Internet connection</string>
+    
+    <string name="cant_be_empty_alert">City name can not be empty</string>
+    <string name="city_not_found_alert">City not found</string>
+    <string name="city_is_already_exists">City is already present in the list</string>
+    <string name="forecast_is_empty">Forecast is empty</string>
+    
+    <string name="pressure_label">Pressure:</string>
+    <string name="humidity_label">Humidity:</string>
+    <string name="wind_speed_label">Wind speed:</string>
+    <string name="description_label">Description:</string>
+    <string name="temperature_label">Temperature:</string>
+    
+</resources>

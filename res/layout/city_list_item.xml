@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    		  android:id="@+id/city_item"
+    		  android:layout_width="match_parent"
+    		  android:layout_height="wrap_content"
+    		  android:orientation="vertical"
+    		  android:layout_margin="2dp"
+    		  android:background="@drawable/cityitembackground"
+    		  android:padding="4dp">
+	<RelativeLayout android:id="@+id/city_info"
+	    		  android:layout_width="match_parent"
+	    		  android:layout_height="wrap_content"
+	    		  android:padding="6dp">
+		<android.support.v7.widget.AppCompatTextView android:id="@+id/city_name"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:textSize="20sp"
+				  android:padding="2dp"
+				  android:singleLine="true"
+				  android:layout_alignParentLeft="true"
+				  android:layout_centerInParent="true"
+				  android:textColor="#4545ee"/>
+		<android.support.v7.widget.AppCompatTextView android:id="@+id/temperature"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_toLeftOf="@+id/delete_item"
+				  android:layout_centerInParent="true"
+				  android:textSize="20sp"
+				  android:paddingLeft="2dp"
+				  android:paddingTop="2dp"
+				  android:paddingBottom="2dp"
+				  android:paddingRight="12dp"
+				  android:textColor="#4545ee"/>
+		<android.support.v7.widget.AppCompatButton android:id="@+id/delete_item"
+		    	android:layout_height="30dp"
+		    	android:layout_width="30dp"
+		    	android:layout_centerInParent="true"
+		    	android:padding="2dp"
+		    	android:layout_alignParentRight="true"
+		    	android:background="@drawable/delete_icon"/>
+	</RelativeLayout>
+	<android.support.v7.widget.AppCompatTextView
+	    		android:id="@+id/details"
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:paddingLeft="8dp"
+	    		android:paddingTop="6dp"
+	    		android:paddingRight="6dp"
+	    		android:paddingBottom="6dp"
+	    		android:textSize="16sp"
+	    		android:textColor="#4545ee"/>
+</android.support.v7.widget.LinearLayoutCompat>	
