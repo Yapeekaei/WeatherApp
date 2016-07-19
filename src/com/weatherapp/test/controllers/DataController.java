@@ -80,6 +80,9 @@ public class DataController {
 			(!ConnectionUtils.isConnected() || (city.getUpdatedDate() != -1 && currentDate - city.getUpdatedDate() <= MIN_REQUEST_PERIOD_MILLS))) {
 			return city;
 		}
+		if (!ConnectionUtils.isConnected()) {
+			return null;
+		}
 		City requestedCity = DAOFactory.getInstance().getWeatherDAO(DAOFactory.DAOType.REMOUTE_REQUEST).updateForecastFor(cityID);		
 		if (requestedCity != null) {
 			requestedCity.setUpdatedDate(currentDate);
